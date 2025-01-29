@@ -93,7 +93,7 @@ def generate_morse_code_audio(name, code):
 
 if __name__ == "__main__":
     print("Enter the text to be converted to a wav file:")
-    user_input = "Hello"#input()
+    user_input = input()
     user_input = user_input.lower()
     if user_input == "":
         print("Please enter a non empty string.")
