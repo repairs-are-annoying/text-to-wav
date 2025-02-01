@@ -69,10 +69,13 @@ def morse_code_wav_data(code, frequency, frames_per_second):
         data.append(round(amplitude / 255.0))
     return data
 
+# need to use sox to debug this...
 def generate_morse_code_audio(name, code):
     frequency = 100
     nchannels = 1
+    # samples_rate = 8000
     frames_per_second = 8000
+    # bits = 8
     width = 1
     frames = frames_per_second * morse_code_time(code)
     morse_code_audio = morse_code_wav_data(code, frequency, frames_per_second)
